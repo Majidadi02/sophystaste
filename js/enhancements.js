@@ -391,3 +391,49 @@ document.getElementById("printButton").onclick = function printRecipe() {
 
   // Load a quote when page opens
   window.addEventListener("load", getFoodQuote);
+
+// Simple hamburger menu functionality - ensure it works
+document.addEventListener('DOMContentLoaded', function() {
+    const hamburger = document.querySelector('.hamburger');
+    const navList = document.querySelector('#mylist');
+    
+    if (hamburger && navList) {
+        console.log('Hamburger menu elements found');
+        
+        hamburger.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            console.log('Hamburger clicked');
+            
+            // Toggle active classes
+            hamburger.classList.toggle('active');
+            navList.classList.toggle('active');
+            
+            // Log the state
+            console.log('Hamburger active:', hamburger.classList.contains('active'));
+            console.log('Nav list active:', navList.classList.contains('active'));
+        });
+        
+        // Close menu when clicking on a link
+        const navLinks = navList.querySelectorAll('a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                hamburger.classList.remove('active');
+                navList.classList.remove('active');
+            });
+        });
+        
+        // Close menu when clicking outside
+        document.addEventListener('click', function(event) {
+            if (!hamburger.contains(event.target) && !navList.contains(event.target)) {
+                hamburger.classList.remove('active');
+                navList.classList.remove('active');
+            }
+        });
+    } else {
+        console.log('Hamburger menu elements not found:', {
+            hamburger: !!hamburger,
+            navList: !!navList
+        });
+    }
+});

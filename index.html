@@ -192,6 +192,32 @@
 
   // Load a quote when page opens
   window.addEventListener("load", getFoodQuote);
+  
+  // Test hamburger menu functionality
+  document.addEventListener('DOMContentLoaded', function() {
+      console.log('Page loaded, testing hamburger menu...');
+      
+      const hamburger = document.querySelector('.hamburger');
+      const navList = document.querySelector('#mylist');
+      
+      console.log('Hamburger element:', hamburger);
+      console.log('Nav list element:', navList);
+      
+      if (hamburger) {
+          hamburger.addEventListener('click', function(e) {
+              console.log('Hamburger clicked!');
+              e.preventDefault();
+              e.stopPropagation();
+              
+              // Toggle classes
+              this.classList.toggle('active');
+              if (navList) {
+                  navList.classList.toggle('active');
+                  console.log('Nav list active:', navList.classList.contains('active'));
+              }
+          });
+      }
+  });
 </script>
 
 </body>
