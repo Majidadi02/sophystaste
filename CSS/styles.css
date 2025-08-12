@@ -318,6 +318,7 @@ a {
         align-items: center;
         justify-content: center;
         margin-bottom: 20px;
+        padding-bottom: 30px;
     }
     .sec2sub1x {
         display: flex;
@@ -338,27 +339,35 @@ a {
 
 .sec2sub1x p {
     text-align: center;
+    font-size: 18px;
 }
 
 #card1 {
-    padding-right: 20px;
+    padding-right: 40px;
+    padding-left: 40px;
     padding-top: 30px;
     font-family: montserrat;
     color: #ffcb99;
 }
 
 #card2 {
+    padding-right: 40px;
+    padding-left: 40px;
     padding-top: 20px;
     font-family: montserrat;
     color: #ffcb99;
 }
 
 #card3 {
+    padding-right: 40px;
+    padding-left: 40px;
     color: #ffcb99;
     font-family: montserrat;
 }
 
 #card4 {
+    padding-right: 40px;
+    padding-left: 40px;
     padding-top: 20px;
     font-family: montserrat;
     color: #ffcb99;
@@ -849,6 +858,33 @@ a.current-page {
     margin-right: 300px;
     margin-bottom: 80px;
 
+}
+
+#quote-box {
+    text-align: center;
+    margin-top: 60px;
+    font-weight: 600;
+    
+}
+#quoteh1 {
+    font-size: 30px;
+    color: #29170D;
+    margin-top: 30px;
+    text-align: center;
+    padding-bottom: -20px;
+}
+#printButton {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-right: 15px;
+    padding-left: 15px;
+    background-color: #ffcb99;
+    color: #29170D;
+    font-weight: 800;
+    font-family: montserrat;
+    margin-top: 60px;
+    margin-left: 60px;
+    border-radius: 20px;
 }
 
 /* media queries */

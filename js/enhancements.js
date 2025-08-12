@@ -369,3 +369,25 @@ document.getElementById("printButton").onclick = function printRecipe() {
       printWindow.document.close();
       printWindow.print();
 }
+
+ 
+  const quoteText = document.getElementById("quote-text");
+  const quoteAuthor = document.getElementById("quote-author");
+  const newQuoteBtn = document.getElementById("new-quote");
+
+  async function getFoodQuote() {
+    try {
+      const res = await fetch("https://food-quote-api.vercel.app/api/foodquote");
+      const data = await res.json();
+
+      quoteText.textContent = `"${data.quote}"`;
+      quoteAuthor.textContent = `— ${data.author}`;
+    } catch (error) {
+      quoteText.textContent = "Oops! Couldn't load a quote.";
+      quoteAuthor.textContent = "";
+      console.error("Error fetching quote:", error);
+    }
+  }
+
+  // Load a quote when page opens
+  window.addEventListener("load", getFoodQuote);

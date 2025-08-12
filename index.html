@@ -49,6 +49,12 @@
         <a href="https://wa.me/+2347062613191" ><button id="button">Reach Us On WhatsApp</button></a>
       </div>
     </div>
+    <div id=" quote">
+        <h1 id="quoteh1">A Dash of Inspiration</h1>
+        <div id="quote-box">
+            <p id="quote-text">Loading quote...</p>
+            <p id="quote-author"></p>
+        </div>
     <div id="section2">
         <div class="sec2sub1" id="card1">
             <div>
@@ -163,6 +169,30 @@
             <hr id="horizontal">
             <p id="right">All rights reserved sophystaste 2025</p>
         </div>
-    </div>    
+    </div> 
+    
+<script>
+    const quoteText = document.getElementById("quote-text");
+  const quoteAuthor = document.getElementById("quote-author");
+  const newQuoteBtn = document.getElementById("new-quote");
+
+  async function getFoodQuote() {
+    try {
+      const res = await fetch("https://food-quote-api.vercel.app/api/foodquote");
+      const data = await res.json();
+
+      quoteText.textContent = `"${data.quote}"`;
+      quoteAuthor.textContent = `— ${data.author}`;
+    } catch (error) {
+      quoteText.textContent = "Oops! Couldn't load a quote.";
+      quoteAuthor.textContent = "";
+      console.error("Error fetching quote:", error);
+    }
+  }
+
+  // Load a quote when page opens
+  window.addEventListener("load", getFoodQuote);
+</script>
+
 </body>
 </html>
