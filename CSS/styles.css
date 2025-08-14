@@ -584,6 +584,16 @@ a.current-page {
     border-color: #29170D;
 }
 
+#menufinal img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    border-width: 15px;
+    border-style: solid;
+    border-color: #29170D;
+}
+
 .menusec1sub1 {
     display: flex;
     justify-content: space-between;
@@ -1417,6 +1427,20 @@ a.current-page {
     padding: 4px 2vw;
     border-radius: 10px;
     margin-left: 35px;
+    }
+
+    /* Ensure combo pack image matches other menu images on small screens */
+    #menusec1 #menufinal img {
+        width: min(70vw, 220px);
+        aspect-ratio: 1 / 1;
+        border-radius: 50%;
+        object-fit: cover;
+        border-width: 10px;
+        border-style: solid;
+        border-color: #29170D;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
     }
 }
 
