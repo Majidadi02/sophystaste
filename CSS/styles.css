@@ -1283,6 +1283,20 @@ a.current-page {
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        margin-left: 0;
+        margin-right: 0;
+        margin-top: 30px;
+        padding-left: 16px;
+        padding-right: 16px;
+        gap: 24px;
+
+    }
+    #menusec1 .menusec1sub1 img {
+    width: min(70vw, 220px);
+    aspect-ratio: 1 / 1; /* keeps it square even with height:auto elsewhere */
+    object-fit: cover;
+    border-radius: 50%;
+    border-width: 10px; /* lighten thick border on small screens */
     }
     #menufinal {
     margin-left: auto;
@@ -1291,7 +1305,7 @@ a.current-page {
     flex-direction: column;
     width: 100%;
     text-align: center;
-    /* align-items: center; */
+    align-items: center;
 }
 #menusec1 h1,
   #menufinal p {
@@ -1304,11 +1318,15 @@ a.current-page {
   #menufinal p {
     font-size: 0.95rem;
     width: 100%;
+     margin: 10px 0 0;
   }
 
   #menufinal img {
-    margin-left: 80px;
-    margin-top: -20px;
+   width: min(70vw, 220px);
+    margin: 0 auto;
+    aspect-ratio: 1 / 1;
+    border-width: 10px;
+    
   }
 #button3 {
     font-size: 0.9rem;
@@ -1929,6 +1947,20 @@ a.current-page {
         flex-direction: column;
         align-items: center;
         justify-content: center;
+         margin-left: 0;
+        margin-right: 0;
+        margin-top: 30px;
+        padding-left: 16px;
+        padding-right: 16px;
+        gap: 24px;
+    }
+
+     #menusec1 .menusec1sub1 img {
+    width: min(70vw, 220px);
+    aspect-ratio: 1 / 1; /* keeps it square even with height:auto elsewhere */
+    object-fit: cover;
+    border-radius: 50%;
+    border-width: 10px; /* lighten thick border on small screens */
     }
     #menufinal {
     margin-left: auto;
@@ -1942,6 +1974,7 @@ a.current-page {
 #menusec1 h1,
   #menufinal p {
     font-size: 1.5rem;
+    margin: 10px 0 0;
     /* text-align: center; */
   }
   .menusec1sub1 p {
@@ -1955,6 +1988,10 @@ a.current-page {
   #menufinal img {
     margin-left: 80px;
     margin-top: -20px;
+     width: min(70vw, 220px);
+    margin: 0 auto;
+    aspect-ratio: 1 / 1;
+    border-width: 10px;
   }
 #button3 {
     font-size: 0.9rem;
